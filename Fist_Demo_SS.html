@@ -3,6 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>First_Demo_SS</title>
+    <style>
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td,th{
+            border: 1px solid red;
+        }
+
+    </style>
+    <script src="my_script_ss.js"></script>
   <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 </head>
@@ -27,13 +38,64 @@
   <div class="card-body">
 
     <h4 class="card-title">Add Blog Here</h4>
-    <p class="card-text">You can Add Blog here</p>
-    <lable>Title :</lable> <input type="text" size="95" name="Title" placeholder="Title "> <br>
-    <lable>Articles : </lable> <textarea name="text"  cols="95" rows="10"> </textarea> <br>
-    <lable>Add Image : </lable><input type="text" size="92" name="Add Image" placeholder="Add Image"></input><br>
-    <a href="#" class="btn btn-primary">Submit</a>
+
+    <div class="row mt-3">
+       <div class="col-1" style="text-align: right">
+          <lable>Title :</lable>
+       </div>
+        <div class="col-11" style="text-align: left;">
+          <input type="text" id="TextTitle" size="95" name="Title" placeholder="Title "> <br>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-1" style="text-align: right">
+          <lable>Articles:</lable>
+        </div>
+        <div class="col-11" style="text-align: left">
+          <textarea name="text"  id="TextArea" cols="98" rows="5" ></textarea>
+        </div>
+    </div>
+      <div class="row mt-3">
+        <div class="col-1" style="text-align: right">
+          <lable>Add Image : </lable>
+        </div>
+        <div class="col" style="text-align: left">
+        <input type="text" id="AddImage" size="95" name="Add Image" placeholder="Add Image"></input>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-6" style="text-align: center">
+        <a href="#" id="Submitbtn" lass="btn btn-primary">Submit</a>
+        </div>
+    </div>
+
   </div>
 </div>
+
+  <h1 id="data">
+
+  </h1>
+   <table border="1">
+        <tr>
+            <th>
+            Title
+            </th>
+            <th>
+             Articles
+            </th>
+            <th>
+             Add Image
+            </th>
+        </tr>
+        <tr>
+            <td id="1" style="border: 2px solid black">
+            </td>
+            <td id="2" style="border: 2px solid black">
+            </td>
+            <td id="3" style="border: 2px solid black">
+            </td>
+        </tr>
+    </table>
   <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
